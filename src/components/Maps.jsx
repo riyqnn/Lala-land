@@ -6,7 +6,7 @@ import "@stadiamaps/maplibre-search-box/dist/style.css";
 
 const API_KEY = import.meta.env.VITE_MAPTILER_KEY;
 
-const Map3DBuildings = () => {
+const Maps = () => {
   useEffect(() => {
     const map = new maplibregl.Map({
       container: "map",
@@ -17,7 +17,6 @@ const Map3DBuildings = () => {
             type: "raster",
             tiles: ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
             tileSize: 256,
-            attribution: "© OpenStreetMap Contributors",
             maxzoom: 19,
           },
           terrainSource: {
@@ -207,4 +206,4 @@ const Map3DBuildings = () => {
   );
 };
 
-export default Map3DBuildings;
+export default Maps;
