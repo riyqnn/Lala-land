@@ -66,11 +66,15 @@ const Maps = () => {
 
     // Kontrol Pencarian
     const searchControl = new MapLibreSearchControl({
+    apiKey: import.meta.env.VITE_STADIA_MAPS_KEY,  
       placeholder: "Cari alamat...",
       showMarker: true,
       markerColor: "#3b82f6",
       popupBackground: "white",
       popupBorderRadius: 12,
+      params: {
+          'api_key': import.meta.env.VITE_STADIA_MAPS_KEY
+      }
     });
 
     // Kontrol Geolokasi
